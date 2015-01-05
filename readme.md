@@ -1,4 +1,4 @@
-# Environment Setup(OSX)
+# Python development environment Setup (OSX only)
 
 -install homebrew
 $ ruby -e "$(curl -fsSL https-//raw.github.com/Homebrew/homebrew/go/install)"
@@ -10,7 +10,7 @@ $ brew install python
 $ pip install virtualenv
 
 
-# New Project Setup (OSX\Linux)
+# New Flask project setup (OSX and Linux)
 
 -create the project directory and cd into it
 $ mkdir one
@@ -39,7 +39,7 @@ $ . venv/bin/activate
 
 
 
-# Cloned Project Setup (OSX\Linux)
+# Cloned Flask Project Setup (OSX and Linux)
 
 -clone project from Github and cd into it
 $ git clone git@github.com:aregsar/one.git
