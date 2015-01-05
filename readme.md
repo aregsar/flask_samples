@@ -1,6 +1,6 @@
 # Python development environment Setup (OSX only)
 
--install homebrew\s\s
+-install homebrew
 $ ruby -e "$(curl -fsSL https-//raw.github.com/Homebrew/homebrew/go/install)"
 
 -install python 2.7 and pip 2.7 with homebrew
