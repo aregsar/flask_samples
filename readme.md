@@ -1,13 +1,13 @@
 # Python development environment Setup (OSX only)
 
 -install homebrew
--$ ruby -e "$(curl -fsSL https-//raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https-//raw.github.com/Homebrew/homebrew/go/install)"
 
 -install python 2.7 and pip 2.7 with homebrew
--$ brew install python
+brew install python
 
 -install virtualenv with pip
--$ pip install virtualenv
+pip install virtualenv
 
 
 # New Flask project setup (OSX and Linux)
