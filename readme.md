@@ -1,20 +1,20 @@
 
-OSX installation instructions
+# OSX installation instructions
 
 
-1- Environment Setup
+# Environment Setup
 
-# install homebrew
+-install homebrew
 $ ruby -e "$(curl -fsSL https-//raw.github.com/Homebrew/homebrew/go/install)"
 
-# install python 2.7 and pip 2.7 with homebrew
+-install python 2.7 and pip 2.7 with homebrew
 $ brew install python
 
-# install virtualenv with pip
+-install virtualenv with pip
 $ pip install virtualenv
 
 
-2- New Project Setup
+# New Project Setup
 
 # create the project directory and cd into it
 $ mkdir one
