@@ -1,8 +1,9 @@
+*.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info
 venv
 bin
 lib
 dist
-*.pyc
-*.pyo
-*.egg
-*.egg-info
