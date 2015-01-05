@@ -15,9 +15,12 @@ $ pip install virtualenv
 
 # New Flask project setup (OSX and Linux)
 
--create the project directory and cd into it
+-create the project directory
 -
 $ mkdir one
+
+-move to project directory
+-
 $ cd one
 
 -create virtual environment and venv subfolder - one time per project operation
@@ -54,7 +57,11 @@ $ . venv/bin/activate
 
 -clone project from Github and cd into it
 -
-$ git clone git@github.com:aregsar/one.git
+$ git clone <project>
+
+
+-move to project directory
+-
 $ cd one
 
 -create virtual environment and venv subfolder - one time per project operation
