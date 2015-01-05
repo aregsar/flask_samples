@@ -1,8 +1,4 @@
-
-# OSX installation instructions
-
-
-# Environment Setup
+# Environment Setup(OSX)
 
 -install homebrew
 $ ruby -e "$(curl -fsSL https-//raw.github.com/Homebrew/homebrew/go/install)"
@@ -14,7 +10,7 @@ $ brew install python
 $ pip install virtualenv
 
 
-# New Project Setup
+# New Project Setup (OSX\Linux)
 
 -create the project directory and cd into it
 $ mkdir one
@@ -43,7 +39,7 @@ $ . venv/bin/activate
 
 
 
-# Clone from Github
+# Cloned Project Setup (OSX\Linux)
 
 -clone project from Github and cd into it
 $ git clone git@github.com:aregsar/one.git
@@ -64,7 +60,10 @@ $ . venv/bin/activate
 -deactivate the virtual environment
 (venv)$ deactivate
 
-# Serving using manage.py
+# Running the application using manage.py
+
+-In bigger projects the task of running the application is moved
+to a separate manage.py file in which case:
 
 -run the appication locally
 (venv)$ python manage.py
