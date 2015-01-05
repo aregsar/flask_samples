@@ -55,9 +55,9 @@ $ . venv/bin/activate
 
 # Cloned Flask Project Setup (OSX and Linux)
 
--clone project from Github and cd into it
+-clone project from Github
 -
-$ git clone <project>
+$ git clone [projectname]
 
 
 -move to project directory
@@ -86,10 +86,10 @@ $ . venv/bin/activate
 
 # Running the application using manage.py
 
--In bigger projects the task of running the application is moved
-to a separate manage.py file in which case:
+-In some projects the code for running the application is moved
+to a separate manage.py file in the root directory of the project
 
--run the appication locally
+-run the application
 -
 (venv)$ python manage.py
 
