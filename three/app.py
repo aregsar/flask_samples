@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort, jsonify
+from flask import Flask, render_template, abort, jsonify,request
 
 app = Flask(__name__)
 
@@ -11,17 +11,19 @@ def about():
     return jsonify(name="flask",age=5)
     #return jsonify({"name":"flask","age":5})
 
-@app.route('/create', methods=["Get","Post"])
+@app.route('/create', methods=["GET","POST"])
 def create():
+    if request.method == 'GET':
+        return jsonify(name="flask",age=5)
     return render_template('name.html',name='create')
 
 @app.route('/user/<int:id>')
 def get(id):
+    app.logger.debug('app.logger.debug - id == %d', id)
+    app.logger.warning('app.logger.warning')
+    app.logger.error('app.logger.error')
     return render_template('name.html',name='get')
 
-@app.route('/user/<name>')
-def name(name):
-    return render_template('name.html',name=name)
 
 @app.route('/user', defaults={'name': 'flask'})
 @app.route('/user/<name>')

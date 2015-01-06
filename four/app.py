@@ -24,6 +24,8 @@ def generror():
 
 @app.errorhandler(Exception)
 def exception_handler(error):
+    if request.is_xhr:
+        return jsonify(status="error",message="there was an error"), 500
     return repr(error), 500
 
 print app.url_map
