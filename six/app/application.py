@@ -1,11 +1,11 @@
 # from flask import Flask
 # app = Flask(__name__)
 
-# from views.home import home
-# app.register_blueprint(home)
+# from views import home
+# app.register_blueprint(home.res)
 
-# from views.account import account
-# app.register_blueprint(account)
+# from views import account
+# app.register_blueprint(account.res)
 
 # app.config['DATABASE_URL'] = "postgres"
 

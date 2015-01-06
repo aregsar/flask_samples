@@ -1,9 +1,10 @@
 from flask import Blueprint, render_template,url_for
 from app import app
 
+#res = Blueprint('account', __name__)
 account = Blueprint('account', __name__)
 
-
+#@res.route("/account")
 @account.route("/account")
 def index():
     print app.config['DEBUG']
@@ -15,6 +16,7 @@ def index():
 
 
 
+#@res.route("/account/details")
 @account.route("/account/details")
 def details():
     print app.config['DEBUG']

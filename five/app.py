@@ -7,14 +7,17 @@ app.config['DEBUG'] = True
 app.config.from_object('settings')
 
 
-# from views import home
-# app.register_blueprint(home.res)
-
 from views.home import home
 app.register_blueprint(home)
 
 from views.account import account
 app.register_blueprint(account)
+
+# from views import home
+# app.register_blueprint(home.home)
+
+# from views import account
+# app.register_blueprint(account.account)
 
 
 
