@@ -10,13 +10,13 @@ flask application
 from flask import Flask
 app = Flask(__name__)
 
+#@app.route("/home")
 @app.route("/")
-@app.route("/home")
 def hello():
     return "Hello World"
 
 
-print app.url_map
+#print app.url_map
 
 #run the application from command line
 if __name__ == "__main__":
