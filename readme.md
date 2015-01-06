@@ -17,11 +17,11 @@ $ pip install virtualenv
 
 -create the project directory
 -
-$ mkdir one
+$ mkdir [projectname]
 
 -move to project directory
 -
-$ cd one
+$ cd [projectname]
 
 -create virtual environment and venv subfolder - one time per project operation
 -
@@ -57,12 +57,12 @@ $ . venv/bin/activate
 
 -clone project from Github
 -
-$ git clone [projectname]
+$ git clone [projectURL]
 
 
 -move to project directory
 -
-$ cd one
+$ cd [projectname]
 
 -create virtual environment and venv subfolder - one time per project operation
 -
@@ -98,9 +98,36 @@ to a separate manage.py file in the root directory of the project
 -run the application locally using gunicorn
 -
 
+The general form of the command for running with gunicorn is:
+(venv)$ gunicorn -b 127.0.0.1:4000 <flask application instance container>:<flask application instance name>
+
+where <flask application instance container> is a file or directory inside the project root.
+If it is a file then it is the name of the file in which the app instance is created or
+the name of the file that imports the app instance. If it is a directory then it is
+the name of a python package directory where the app instance resides inside the __init__.py file
+
+Example where the flask application instance named app
+is imported in a manage.py file.
+
+(venv)$ gunicorn -b 127.0.0.1:4000 manage:app
+
+Example where the flask application instance named app
+is created inside the app.py file
+or is created in the __init__.py file inside a directory named app.
+
+(venv)$ gunicorn -b 127.0.0.1:4000 app:app
+
+
 -run the application on Heroku using gunicorn
 -
 
+in Procfile add:
+
+web: gunicorn manage:app
+
+or
+
+web: gunicorn app:app
 
 # Flask resources
 
