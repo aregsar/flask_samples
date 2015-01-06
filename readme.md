@@ -99,12 +99,14 @@ to a separate manage.py file in the root directory of the project
 -
 
 The general form of the command for running with gunicorn is:
-(venv)$ gunicorn -b 127.0.0.1:4000 <flask application instance container>:<flask application instance name>
+-
+(venv)$ gunicorn -b 127.0.0.1:4000 [flask application instance container]:[flask application instance name]
 
-where <flask application instance container> is a file or directory inside the project root.
+-
+where [flask application instance container] is a file or directory inside the project root.
 If it is a file then it is the name of the file in which the app instance is created or
 the name of the file that imports the app instance. If it is a directory then it is
-the name of a python package directory where the app instance resides inside the __init__.py file
+the name of a python package directory where the app instance resides inside the [__init__.py] file
 
 Example where the flask application instance named app
 is imported in a manage.py file.
