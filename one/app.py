@@ -11,10 +11,10 @@ from flask import Flask
 app = Flask(__name__)
 
 #@app.route("/home")
+
 @app.route("/")
 def hello():
     return "Hello World"
-
 
 #print app.url_map
 
