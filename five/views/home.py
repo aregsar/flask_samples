@@ -2,10 +2,8 @@ from flask import Blueprint, render_template,url_for
 from app import app
 
 home = Blueprint('home', __name__)
-#res = Blueprint('home', __name__)
 
 @home.route("/")
-#@res.route("/")
 def index():
     print app.config['DEBUG']
     print app.config['DATABASE_URL']

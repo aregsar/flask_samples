@@ -93,6 +93,27 @@ to a separate manage.py file in the root directory of the project
 -
 (venv)$ python manage.py
 
+# Using autoenv to automatically activate the virtual environment
+and export environment variables
+
+-install autoenv with pip
+-
+$ pip install autoenv
+
+-configure autoenv
+-
+$ echo 'source /usr/local/bin/activate.sh' >> ~/.bash_profile
+
+-add a .env file to project root
+
+-add ". venv/bin/activate" without the quotes to the .env file
+
+-add "export DEBUG=True" without the quotes to the .env file
+
+-Now whenever you cd into the project directory the .env file is executed
+automatically activating the virtual envoronment and exporting any exported variables
+
+
 # Serving using production servers
 
 -run the application locally using gunicorn
