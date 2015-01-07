@@ -100,7 +100,7 @@ to a separate manage.py file in the root directory of the project
 
 The general form of the command for running with gunicorn is:
 -
-(venv)$ gunicorn -b 127.0.0.1:4000 [flask application instance container]:[flask application instance name]
+gunicorn -b 127.0.0.1:4000 [flask application instance container]:[flask application instance name]
 
 -
 where [flask application instance container] is a file or directory inside the project root.
@@ -133,40 +133,57 @@ web: gunicorn app:app
 
 # Flask resources
 
+the flask website
 http://flask.pocoo.org/
 
+an online reference book that also coveres organising large flask apps with blueprints
 https://exploreflask.com/
 
+the best step by step online tutorials for flask
 https://realpython.com/blog/
 
+the realpython youtube channel:
 https://www.youtube.com/playlist?list=PLLjmbh6XPGK5e0IbpMccp7NmJHnN8O1ng
 
+a compilation of flask resources
 http://www.fullstackpython.com/flask.html
 
+The definitive flask book from oreilly
 http://flaskbook.com/
 
+exellent blog from the author of the orielly flask book
 http://blog.miguelgrinberg.com/
 
+this sets up a basic flask app including self hosting server configuration
 http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.VKxL7mTZln4
 
+this covers the use of blueprints
 http://maximebf.com/blog/2012/11/getting-bigger-with-flask/#.VKxL0WTZln4
 
+excellent intro to flask. Requires a subscription but has free trial period.
 http://www.pluralsight.com/courses/flask-micro-framework-introduction
 
+flask approved extension list
 http://flask.pocoo.org/extensions/
 
 # Common Flask extensions
 
+for running tasks from command line:
 http://flask-script.readthedocs.org/en/latest/
 
+for html form handling and validation:
 https://flask-wtf.readthedocs.org/en/latest/
 
+for data models and ORM:
 https://pythonhosted.org/Flask-SQLAlchemy/
 
+for database schema migrations:
 https://flask-migrate.readthedocs.org/en/latest/
 
+for user authentication:
 https://flask-login.readthedocs.org/en/latest/
 
+for testing:
 https://pythonhosted.org/Flask-Testing/
 
 
