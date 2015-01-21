@@ -1,9 +1,5 @@
 from app import app
 
-#load configuration
-from app.config.settings import Settings
-app.config.from_object(Settings)
-
 #register route blueprints
 from app.responders.home import home
 app.register_blueprint(home)

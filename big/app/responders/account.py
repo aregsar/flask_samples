@@ -3,6 +3,13 @@ from app import app
 
 account = Blueprint('account', __name__)
 
+
+@account.route("/account")
+def index():
+    #return url_for('account.index')
+    return render_template("account/index.html",page="account index")
+
+
 @account.route("/signup")
 def signup():
     return render_template("account/signup.html",page="account signup")
