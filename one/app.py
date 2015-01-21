@@ -52,27 +52,27 @@ def index():
 
 # @app.route('/home', methods=["GET"])
 # def home():
-#     return "get home"
+#     return "GET home"
 
 #-------------------------------------------------------------------------
 
 # @app.route('/home', methods=["GET","POST"])
 # def create():
-#     return "get or post home"
+#     return "GET or POST home"
 
 #-------------------------------------------------------------------------
 
 # @app.route('/home', methods=["POST"])
 # def create():
-#     return "post home"
+#     return "POST home"
 
 #-------------------------------------------------------------------------
 
-# @app.route('/create', methods=["GET","POST"])
+# @app.route('/home', methods=["GET","POST"])
 # def create():
-#     if request.method == 'POST':
-#         return "POST"
-#     return "GET"
+#     if request.method == 'GET':
+#         return "GET home"
+#     return "POST home"
 
 #-------------------------------------------------------------------------
 
