@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template,url_for
-from app import app
+from appp import app
 
 account = Blueprint('account', __name__)
 

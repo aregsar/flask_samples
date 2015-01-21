@@ -1,18 +1,29 @@
-from flask import Flask,url_for,redirect
+from flask import Flask,url_for,redirect,render_template,abort,jsonify,request
 app = Flask(__name__)
 
-# from app.configs.settings import Settings
+#app.config['DEBUG'] = True
+#app.config['SECRET_KEY'] = "notsosecretkey"
+#app.config['DATABASE_URL'] = "postgresql://username:password@localhost/dbname"
+
+# print app.config['DEBUG']
+# print app.config['SECRET_KEY']
+# print app.config['DATABASE_URL']
+
+# print app.debug
+# print app.secret_key
+
+
+#app.config.from_object('settings')
+
+# from config.settings import Settings
 # app.config.from_object(Settings)
 
-# print app.secret_key
-# print app.config['SECRET_KEY']
-# print app.debug
-# print app.config['DEBUG']
 
+@app.route("/")
+def index():
+    return "Welcome home"
 
-# @app.route("/")
-# def home():
-#     return "Welcome home"
+#-------------------------------------------------------------------------
 
 
 # @app.route("/")
@@ -85,23 +96,41 @@ app = Flask(__name__)
 
 # @app.route('/index')
 # def index():
-#     return render_template('index.html',var='abcd')
+#     return render_template('index.html',name='bob')
 
+#-------------------------------------
+# @app.route('/index')
+# def index():
+#     abort(404)
 
 # @app.errorhandler(404)
 # def page_not_found(error):
-#     return 'The page you requested does not exist', 404
+#     return '404 error', 404
+#--------------------------------------
 
+# @app.route("/error")
+# def error():
+#     raise Exception("error")
 
-# @app.errorhandler(500)
-# def internal_server_error_handler(error):
+# @app.errorhandler(Exception)
+# def exception_handler(error):
 #     return render_template("500.html"), 500
+
+#--------------------------------------
+
+# @app.
+# route("/error")
+# def error():
+#     raise Exception("error")
 
 # @app.errorhandler(Exception)
 # def exception_handler(error):
 #     if request.is_xhr:
 #         return jsonify(status="error",message="there was an error"), 500
-#     return repr(error), 500
+#     return render_template("500.html"), 500
+#-----------------------------------------
+
+
 
 print app.url_map
 

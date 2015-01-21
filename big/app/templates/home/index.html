@@ -1,0 +1,25 @@
+{% extends 'layout/main.html' %}
+{% block title %}index{% endblock %}
+{% block body %}
+    <h1>{{ page }} page</h1>
+    {{url_for('home.index')}}<br />
+    <a href={{url_for('home.index')}}>home.index</a><br />
+    <a href={{url_for('home.contact')}}>home.contact</a><br />
+    <a href={{url_for('home.about')}}>home.about</a><br />
+    <a href={{url_for('account.signup')}}>account.signup</a><br />
+    <a href={{url_for('account.signin')}}>account.signin</a><br />
+    <a href={{url_for('account.details')}}>account.details</a><br />
+
+    {% for num in range(3) %}
+        {{num}}<br />
+        {% if num==0 %}
+            Zero<br />
+        {% elif num==1 %}
+            One<br />
+        {% else %}
+            Two<br />
+        {% endif %}
+    {% endfor %}
+
+
+{% endblock %}
