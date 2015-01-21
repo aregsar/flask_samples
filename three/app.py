@@ -8,14 +8,14 @@ def home():
 
 @app.route("/about")
 def about():
-    return jsonify(name="flask",age=5)
-    #return jsonify({"name":"flask","age":5})
+    #return jsonify(name="flask",age=5)
+    return jsonify({"name":"flask","age":5})
 
 @app.route('/create', methods=["GET","POST"])
 def create():
-    if request.method == 'GET':
+    if not request.method == 'GET':
         return jsonify(name="flask",age=5)
-    return render_template('name.html',name='create')
+    return render_template('name.html',name='kobi')
 
 @app.route('/user/<int:id>')
 def get(id):

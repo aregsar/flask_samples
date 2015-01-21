@@ -7,13 +7,14 @@ def home():
     print url_for('home') # /
     print redirect(url_for('home')) # <Response 209 bytes [302 FOUND]>
     print url_for('hello') # /hello
-    print redirect(url_for('hello')) # <Response 219 bytes [302 FOUND]>
-    return "Hello World"
+    return redirect(url_for('hello')) # <Response 219 bytes [302 FOUND]>
+    #return "Hello World"
 
 
 @app.route("/hello")
 def hello():
-    return redirect(url_for('home'))
+    return "hello"
+    #return redirect(url_for('home'))
 
 @app.route("/about")
 def about():
