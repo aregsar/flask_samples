@@ -1,5 +1,8 @@
 from app import app
 
+from config.settings import Settings
+app.config.from_object(Settings)
+
 from app.responders.home import home
 app.register_blueprint(home)
 

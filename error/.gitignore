@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info
+venv
+bin
+lib
+dist
