@@ -10,44 +10,46 @@ def index():
 
 #-------------------------------------------------------------------------
 
-# @app.route("/abort")
-# def notfound():
-#     abort(404)
-
-#-------------------------------------------------------------------------
-
-# @app.route('/index')
-# def index():
-#     abort(404)
+@app.route("/abort")
+def notfound():
+    abort(404)
 
 # @app.errorhandler(404)
 # def page_not_found(error):
 #     return '404 error', 404
+
 #-------------------------------------------------------------------------
 
-# @app.route("/error")
-# def error():
-#     raise Exception("error")
+@app.route("/error")
+def error():
+    raise Exception("error")
 
 # @app.errorhandler(Exception)
 # def exception_handler(error):
 #     return render_template("500.html"), 500
 
-#-------------------------------------------------------------------------
-
-# @app.
-# route("/error")
-# def error():
-#     raise Exception("error")
 
 # @app.errorhandler(Exception)
 # def exception_handler(error):
-#     if request.is_xhr:
-#         return jsonify(status="error",message="there was an error"), 500
-#     return render_template("500.html"), 500
+#     if not request.is_xhr:
+#         return "<h1>Server Error</h1>", 500
+#     return jsonify(status="error",message="there was an error"), 500
+
 
 #-------------------------------------------------------------------------
 
+class PostgresConnectionError(Exception):
+    pass
+
+@app.route("/errordb")
+def dberror():
+    raise PostgresConnectionError
+
+# @app.errorhandler(PostgresConnectionError)
+# def postgres_exception_handler(error):
+#     return repr(error), 500
+
+#--------------------------------------------------------------------------
 
 print app.url_map
 
