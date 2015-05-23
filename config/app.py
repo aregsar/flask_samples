@@ -3,20 +3,24 @@ app = Flask(__name__)
 
 #------------------------------------------------------------------
 
-app.config['DEBUG'] = True
-app.config['SECRET_KEY'] = "secret"
-app.config['DATABASE_URL'] = "postgresql://username:password@localhost/dbname"
+# app.config['DEBUG'] = True
+# app.config['SECRET_KEY'] = "secret"
+# app.config['DATABASE_URL'] = "postgresql://username:password@localhost/dbname"
+
 
 #-------------------------------------------------------------------
 
-#app.config.from_object('settings')
+# app.config.from_object('settings')
+
 
 #-------------------------------------------------------------------
 
 
-# from config.settings import Settings
-# app.config.from_object(Settings)
+from config.settings import Settings
+app.config.from_object(Settings)
 
+print app.secret_key
+print app.config['DATABASE_URL']
 
 #----------------------------------------------------------------------
 

@@ -12,11 +12,11 @@ def index():
 
 @app.route("/abort")
 def notfound():
-    abort(404)
+    abort(500)
 
-# @app.errorhandler(404)
+# @app.errorhandler(500)
 # def page_not_found(error):
-#     return '404 error', 404
+#     return error, 404
 
 #-------------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ def error():
 
 # @app.errorhandler(Exception)
 # def exception_handler(error):
-#     if not request.is_xhr:
+#     if request.is_xhr:
 #         return "<h1>Server Error</h1>", 500
 #     return jsonify(status="error",message="there was an error"), 500
 
@@ -45,9 +45,9 @@ class PostgresConnectionError(Exception):
 def dberror():
     raise PostgresConnectionError
 
-# @app.errorhandler(PostgresConnectionError)
-# def postgres_exception_handler(error):
-#     return repr(error), 500
+@app.errorhandler(PostgresConnectionError)
+def postgres_exception_handler(error):
+    return repr(error), 500
 
 #--------------------------------------------------------------------------
 
